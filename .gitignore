@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#Env
+e-card/
+
+#PyCharm
+.idea/
