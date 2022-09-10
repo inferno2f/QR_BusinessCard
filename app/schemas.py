@@ -1,11 +1,12 @@
-from pydantic import BaseModel, Field, EmailStr, constr
 from typing import Optional
+
+from pydantic import BaseModel, Field, EmailStr, constr
 
 
 class ContactCard(BaseModel):
     first_name: str
     last_name: str
-    mobile_number: Optional[
+    phone: Optional[
         constr(
             strip_whitespace=True,
             regex=r"^(\+)[1-9][0-9\-\(\)\.]{9,15}$"
@@ -20,7 +21,7 @@ class ContactCard(BaseModel):
             'example': {
                 'first_name': 'John',
                 'last_name': 'Doe',
-                'mobile_number': '+1 (305) 409 39 31',
+                'mobile_number': '+1(305)4443322',
                 'email': 'john@doe.com',
                 'website': 'github.com/johndoe'
             }
